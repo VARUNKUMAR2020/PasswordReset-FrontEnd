@@ -8,7 +8,7 @@ const Login = () => {
   function handleSubmit(e) {
     e.preventDefault();
     console.log(email, password);
-    fetch("https://passwordreset-gfgs.onrender.com/signIn", {
+    fetch("https://passwordreset-gfgs.onrender.com/login", {
       method: "POST",
       crossDomain: true,
       headers: {
