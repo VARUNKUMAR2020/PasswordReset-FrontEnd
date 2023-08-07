@@ -8,7 +8,7 @@ const Login = () => {
   function handleSubmit(e) {
     e.preventDefault();
     console.log(email, password);
-    fetch("https://passwordreset-gfgs.onrender.com/login", {
+    fetch("https://passwordreset-gfgs.onrender.com/signIn", {
       method: "POST",
       crossDomain: true,
       headers: {
@@ -27,7 +27,7 @@ const Login = () => {
         if (data.status === "Logged in") {
           alert("Logged in Succefully");
           window.localStorage.setItem("token", data.data);
-          window.location.href = "./user";
+          window.location.href = "/user";
         }else{
           alert("Please check the credentials");
         }
